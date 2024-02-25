@@ -1,0 +1,36 @@
+.rules-btn-container {
+    position: absolute;
+    right: 30px;;
+    bottom:30px;
+
+    & .rules-btn {
+        background:transparent;
+        text-align:center;
+        font-size:1rem;
+        font-weight:600;
+        text-transform: uppercase;
+        color:#e9e9e9;
+        padding:.6em 2.6em;
+        border:1px solid #e9e9e9;
+        border-radius:10px;
+        cursor:pointer;
+        transition: .3s linear;
+
+        &:hover {
+            background-color:#e9e9e9;
+            color:$score-text;
+        }
+    }
+}
+
+@media (max-width:380px){
+    .rules-btn-container {
+        right:30%;
+        bottom:15px;
+
+        & .rules-btn:hover {
+            background-color:transparent;
+            color:#e9e9e9
+        }
+    }
+}

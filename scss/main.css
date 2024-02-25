@@ -68,7 +68,8 @@
   width: 100%;
   height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   background: radial-gradient(circle, #1f3756, #141539);
 }
 
@@ -81,6 +82,99 @@
   .app {
     width: 90%;
     padding-top: 30px;
+  }
+}
+.moves-container {
+  background-image: url("../images/bg-triangle.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  row-gap: 50px;
+  justify-content: center;
+  width: 65%;
+  margin: 90px auto 0 auto;
+}
+
+.move {
+  width: 180px;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: inset 0 8px 0 #dfdfdf, inset 0 -8px 0 #dfdfdf;
+  justify-self: center;
+  cursor: pointer;
+}
+
+.paper {
+  border: 21px solid #5671f5;
+}
+
+.scissors {
+  border: 21px solid #eca922;
+}
+
+.rock {
+  border: 21px solid #dd405d;
+  grid-column: span 2;
+}
+
+@media (max-width: 380px) {
+  .moves-container {
+    width: 100%;
+    background-size: 70%;
+    margin-top: 50px;
+  }
+  .move {
+    width: 115px;
+    height: 115px;
+    border-width: 15px;
+    justify-self: start;
+  }
+  .move img {
+    width: 40px;
+  }
+  .rock {
+    justify-self: center;
+  }
+  .scissors {
+    justify-self: end;
+  }
+}
+.rules-btn-container {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
+.rules-btn-container .rules-btn {
+  background: transparent;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #e9e9e9;
+  padding: 0.6em 2.6em;
+  border: 1px solid #e9e9e9;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+.rules-btn-container .rules-btn:hover {
+  background-color: #e9e9e9;
+  color: #2a46c0;
+}
+
+@media (max-width: 380px) {
+  .rules-btn-container {
+    right: 30%;
+    bottom: 15px;
+  }
+  .rules-btn-container .rules-btn:hover {
+    background-color: transparent;
+    color: #e9e9e9;
   }
 }
 body {
