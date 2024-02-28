@@ -122,6 +122,48 @@
   grid-column: span 2;
 }
 
+.game-result {
+  grid-template-columns: repeat(3, 33.33%);
+  width: 80%;
+}
+
+.your-pick, .computer-pick {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+.your-pick h3, .computer-pick h3 {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.winner {
+  box-shadow: 0 0 0 40px rgba(255, 255, 255, 0.07), 0 0 0 80px rgba(255, 255, 255, 0.05), 0 0 0 130px rgba(255, 255, 255, 0.03);
+}
+
+.result-container {
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+}
+.result-container h3 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.result-container .play-again {
+  padding: 0.6em 2.5em;
+  font-size: 0.95rem;
+  border-radius: 5px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+.result-container .play-again:hover {
+  color: #dd405d;
+}
+
 @media (max-width: 380px) {
   .moves-container {
     width: 100%;
